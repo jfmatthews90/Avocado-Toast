@@ -1,3 +1,66 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// Body styling
+
+body {
+	padding-top: 70px;
+}
+
+
+
+// Navigation styling
+
+.nav {
+	background-color: #222;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+	ul {
+		float: right;	
+		padding-right: 20px;
+	}
+
+	li {
+		display: inline-block;
+		padding: 1em 1em .5em;	
+	}
+
+	a {
+		font-size: 2em;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+
+	a:hover {
+		color: #ff0;
+		text-decoration: none;
+		transition: color 800ms;
+		-webkit-transition: color 600ms; // Needed for Safari to read styling
+	}
+}
+
+
+
+// Footer styling
+
+.footer {
+	background-color: #222;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	;
+
+	.copyright {
+		text-align: center;
+		font-size: 1.2em;
+		letter-spacing: .05em;
+		color: #337ab7;
+		padding: .7em;
+	}
+
+}

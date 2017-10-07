@@ -14,24 +14,31 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-    
+
   </head>
 
   <body>
 
-		<nav>
-		  <ul>
-		    <li>Home</li>
-		    <li>About</li>
-		    <li>Contact</li>
-		  </ul>
-		</nav>  	
+		<nav class="nav">
+			<div class="navbar-header">
+				<li><a href="#">Home</a></li>	
+			</div> <!-- / Navbar-header -->
+			<div class="navbar-right">
+			  <ul>
+			    <li><a href="#" class="nav-right">Blogs</a></li>
+			    <li><a href="#" class="nav-right">About</a></li>
+			    <li><a href="#" class="nav-right">Contact</a></li>
+			  </ul> 
+			</div> <!-- /Navbar-right -->
+		</nav> <!-- /Nav -->
 
     <%= yield %>
 
-		<footer>
-		  &copy; 2017 Bike Berlin
-		</footer>
+		<footer class="footer">
+			<div class="copyright">
+		  	&copy; 2017 Test Blog - All Rights Reserved
+		  </div> <!-- /Copyright -->
+		</footer> <!-- /Footer -->
 
   </body>
 </html>
