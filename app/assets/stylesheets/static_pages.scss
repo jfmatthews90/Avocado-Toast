@@ -5,7 +5,6 @@
 
 
 // Body styling
-
 body {
 	padding-top: 70px;
 }
@@ -13,7 +12,6 @@ body {
 
 
 // Navigation styling
-
 .nav {
 	background-color: #222;
 	position: fixed;
@@ -27,7 +25,7 @@ body {
 
 	li {
 		display: inline-block;
-		padding: 1em 1em .5em;	
+		padding: 1em 1em .4em;	
 	}
 
 	a {
@@ -47,7 +45,6 @@ body {
 
 
 // Footer styling
-
 .footer {
 	background-color: #222;
 	width: 100%;
@@ -62,5 +59,4 @@ body {
 		color: #337ab7;
 		padding: .7em;
 	}
-
 }
