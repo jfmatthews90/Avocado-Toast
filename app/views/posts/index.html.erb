@@ -1,19 +1,23 @@
 <%= link_to 'New Post', new_post_path %>
 
-
-<div class="container-fluid">
-  <div class="row">
-    <% @posts.each do |post| %>
-      <div class="post_wrapper">
-        <%= image_tag(post.image_url, class: "img-responsive") %>
-        <h2 class="name"><%= link_to post.name, post %></h2>
-        <h3 class="description"><%= link_to post.description, post %> </h3>
-        <!-- Add Created By User here in future roll out -->
-        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-      </div>
-    <% end %>
-  </div> <!-- /Row -->
-</div> <!-- /Container-fluid -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="row" id="posts-index">
+      <% @posts.each do |post| %>
+        <div class="col-lg-8 col-md-6 col-sm-12">
+          <div class="post_wrapper">
+            <%= image_tag(post.image_url, class: "img-responsive post-images") %>
+            <h2 class="name"><%= link_to post.name, post %></h2>
+            <h3 class="description"><%= link_to post.description, post %> </h3>
+            <!-- Add Created By User here in future roll out -->
+            <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+            <hr>
+          </div> <!-- /Post wrapper -->
+        <% end %>
+      </div> <!-- /Cols -->
+    </div> <!-- /Row -->
+  </div> <!-- /Container-fluid -->
+</div>
 
 
 

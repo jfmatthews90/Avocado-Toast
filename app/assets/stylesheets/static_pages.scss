@@ -6,13 +6,15 @@
 
 // Body styling
 body {
-	padding-top: 70px;
+	padding-top: 80px;
+	padding-bottom: 64.5px;
 }
 
 
 
 // Navigation styling
-.nav {
+.navbar {
+	z-index: 100;
 	background-color: #222;
 	position: fixed;
 	width: 100%;
@@ -25,7 +27,7 @@ body {
 
 	li {
 		display: inline-block;
-		padding: 1em 1em .4em;	
+		padding: .5em .5em;	
 	}
 
 	a {
@@ -59,4 +61,23 @@ body {
 		color: #337ab7;
 		padding: .7em;
 	}
+}
+
+
+
+// Posts index styling
+
+.post-images {
+	max-height: 10em;
+	max-width: 10em;
+}
+
+
+
+// TEST CODE
+
+@media (max-width: 480px) {
+  body {
+    background-color: red;
+  }
 }
