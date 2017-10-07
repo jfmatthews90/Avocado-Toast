@@ -1,7 +1,11 @@
+<!-- The app.html.erb file provides the basic layout for each of you
+	websites web pages, including navigation links, headers, footers, and other 
+	general structure. This is your hub. -->
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestBlog</title>
+    <title>Test Blog</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +13,20 @@
   </head>
 
   <body>
+
+		<nav>
+		  <ul>
+		    <li>Home</li>
+		    <li>About</li>
+		    <li>Contact</li>
+		  </ul>
+		</nav>  	
+
     <%= yield %>
+
+		<footer>
+		  &copy; 2017 Bike Berlin
+		</footer>
+    
   </body>
 </html>
