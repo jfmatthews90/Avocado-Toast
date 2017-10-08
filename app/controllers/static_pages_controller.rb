@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-	
+
   def index
   end
 
@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
     @email = params[:email]
     @message = params[:message]
     ActionMailer::Base.mail(from: @email,
-        to: 'jfmatthews90@gmail.com',
+        to: 'jmatth14@yahoo.com',
         subject: "A new contact form message from #{@name}",
         body: @message).deliver_now
   end
