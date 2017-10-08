@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :contacts, only: [:new, :create]
 
   get 'static_pages/about'
 
