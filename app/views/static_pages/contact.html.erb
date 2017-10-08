@@ -1,4 +1,4 @@
-<h1>Contact</h1>
+<h1>Say Hello!</h1>
 
 <%= flash[:notice] %>
 
@@ -18,7 +18,12 @@
       <%= label_tag :message %>
       <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", :required=> "required" %>
     </div> <!-- /form-group -->
-    
+
+		<div class="hidden">
+			<%= label_tag :nickname %><br />
+			<%= text_field_tag :nickname, hint: 'Leave this field blank' %>
+		</div>
+
     <div class="send-button col-md-12 col-sm-2">
       <%= submit_tag "Send Message" %>
     </div> <!-- /send-button -->
