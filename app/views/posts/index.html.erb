@@ -1,10 +1,12 @@
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-success btn-lg" %>
+
+<hr />
 
 <div class="content">
   <div class="container-fluid">
     <div class="row" id="posts-index">
       <% @posts.each do |post| %>
-        <%= render @posts %>
+        <%= render post %>
       <% end %>
     </div> <!-- /Row -->
   </div> <!-- /Container-fluid -->
