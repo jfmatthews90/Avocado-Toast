@@ -41,7 +41,17 @@
 						  <%= form.submit 'Search' %>
 							<% end %>
 						</li>
-		      </ul>
+		      </ul> <!-- /Links to pages -->
+
+		      <ul class="nav pull-right">
+		      	<li>
+		      		<% if user_signed_in? %>
+		      			<%= link_to('Sign out', destroy_user_session_path, method: :delete) %>
+		      		<% else %>
+		      			<%= link_to('Sign in', new_user_session_path) %>
+		      		<% end %>
+		      	</li>
+		      </ul> <!-- /User login and logout session options -->
 		    </div> <!-- /Navbar-collapse -->
 		  </div> <!-- /Container-fluid -->
 		</nav> <!-- /Navbar-->
@@ -64,7 +74,7 @@
 		<footer class="footer">
 			<div class="copyright">
 		  	&copy; 2017 Test Blog - All Rights Reserved
-		  </div> <!-- /Copyright -->
+		  </div> 
 		</footer> <!-- /Footer -->
 
 	<!-- JavaScript -->

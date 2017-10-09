@@ -1,31 +1,33 @@
-<h1>Say Hello!</h1>
+<div class="contact">  
+  <h1>Say hello!</h1>
 
-<%= flash[:notice] %>
+  <%= flash[:notice] %>
 
-<%= form_tag('/static_pages/thank_you') do %>
-  <div class="contact-form">
-    <div class="form-group">
-      <%= label_tag :name %>
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", :required=> "required" %>
-    </div> <!-- /form-group -->
+  <%= form_tag('/static_pages/thank_you') do %>
+    <div class="contact-form">
+      <div class="form-group">
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", :required=> "required" %>
+      </div> <!-- /form-group -->
 
-    <div class="form-group">
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", :required=> "required" %>
-    </div> <!-- /form-group -->
+      <div class="form-group">
+        <%= label_tag :email, "Email Address" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", :required=> "required" %>
+      </div> <!-- /form-group -->
 
-    <div class="form-group">
-      <%= label_tag :message %>
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", :required=> "required" %>
-    </div> <!-- /form-group -->
+      <div class="form-group">
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", :required=> "required" %>
+      </div> <!-- /form-group -->
 
-		<div class="hidden">
-			<%= label_tag :nickname %><br />
-			<%= text_field_tag :nickname, hint: 'Leave this field blank', captcha: "true" %>
-		</div>
+  		<div class="hidden">
+  			<%= label_tag :nickname %><br />
+  			<%= text_field_tag :nickname, hint: 'Leave this field blank', captcha: "true" %>
+  		</div>
 
-    <div class="send-button col-md-12 col-sm-2">
-      <%= submit_tag "Send Message" %>
-    </div> <!-- /send-button -->
-  </div> <!-- /contact-form -->
-<% end %>
+      <div class="send-button col-md-12 col-sm-2">
+        <%= submit_tag "Send Message", class: "btn btn-info btn-lg btn-contact" %>
+      </div> <!-- /send-button -->
+    </div> <!-- /contact-form -->
+  <% end %>
+</div>

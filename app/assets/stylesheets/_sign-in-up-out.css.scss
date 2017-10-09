@@ -1,0 +1,23 @@
+// Sign in/up/out form
+.sign {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+
+	.form-control {
+		position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+	}
+
+	.btn-sign {
+		display: block;
+		width: 100%;
+	}
+
+	.checkbox-label {
+	display: inline-block;
+	}
+}

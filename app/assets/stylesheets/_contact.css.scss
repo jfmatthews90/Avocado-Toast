@@ -1,0 +1,23 @@
+// Contact form
+.contact {
+	max-width: 80%;
+	padding: 15px;
+	margin: 0 auto;
+
+	.form-control {
+		position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+	}
+
+	.btn-contact {
+		display: block;
+		width: 15%;
+	}
+
+	.checkbox-label {
+	display: inline-block;
+	}
+}
