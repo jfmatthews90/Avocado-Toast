@@ -58,12 +58,10 @@
 
 		<!-- flash tags for Welcome Message upon user sign-in -->
     <% if notice %>
-      <div class="alert alert-info">
-        <%= notice %>
+      <p id="notice" class="alert alert-info"><%= notice %></p>
       </div>
     <% elsif alert %>
-      <div class="alert alert-warning">
-        <%= alert %>
+      <p id="notice" class="alert alert-warning"><%= alert %></p>
       </div>
     <% end %> <!-- /flash tag notice -->
 

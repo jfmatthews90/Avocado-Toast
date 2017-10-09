@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Use for mailing
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
