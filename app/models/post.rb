@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+	belongs_to :user
 
 	def self.search(search_term)
     if Rails.env.development?

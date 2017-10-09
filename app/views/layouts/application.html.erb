@@ -46,6 +46,17 @@
 		  </div> <!-- /Container-fluid -->
 		</nav> <!-- /Navbar-->
 
+		<!-- flash tags for Welcome Message upon user sign-in -->
+    <% if notice %>
+      <div class="alert alert-info">
+        <%= notice %>
+      </div>
+    <% elsif alert %>
+      <div class="alert alert-warning">
+        <%= alert %>
+      </div>
+    <% end %> <!-- /flash tag notice -->
+
 
     <%= yield %>
 
