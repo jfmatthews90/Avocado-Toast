@@ -1,3 +1,7 @@
+# DO NOT USE THIS MODEL
+# DO NOT USE THIS MODEL
+# DO NOT USE THIS MODEL
+
 class Contact < MailForm::Base
 	attribute :name,			:validate => true
 	attribute :email,			:validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
@@ -6,7 +10,7 @@ class Contact < MailForm::Base
 
 	def headers
 		{
-			:subject => "Contact Form",
+			:subject => "Test Blog Contact Form",
 			:to => "jmatth14@yahoo.com",
 			:from => %("#{name}" <#{email}>)
 		}

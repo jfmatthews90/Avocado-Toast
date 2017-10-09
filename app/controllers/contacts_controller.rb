@@ -1,3 +1,7 @@
+#DO NOT USE THIS CONTROLLER
+#DO NOT USE THIS CONTROLLER
+#DO NOT USE THIS CONTROLLER
+
 class ContactsController < ApplicationController
 
 	def new
