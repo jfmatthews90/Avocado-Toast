@@ -4,6 +4,13 @@ Rails.application.routes.draw do
   resources :posts
   resources :contacts, only: [:new, :create]
 
+  resources :posts, :users
+
+  resources :posts do
+  	resources :comments
+	end
+	resources :users
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
