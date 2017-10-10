@@ -1,11 +1,33 @@
 <div>
 	<div class="col-lg-8 col-md-6 col-sm-12">
 	  <div class="post_wrapper">
+
 	    <%= image_tag(post.image_url, class: "img-responsive post-images") %>
 	    <h2 class="name"><%= link_to post.name, post %></h2>
 	    <h3 class="description"><%= link_to post.description, post %> </h3>
 	    <!-- Add Created By User here in future roll out -->
 	    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+
+    	<form action="/posts/<%= post.id %>/like" method="POST">
+    		<input type="hidden" name="_method" value="PUT" />
+    		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	    		<button class="btn btn-default btn-xs btn-vote">
+		        <span class="glyphicon glyphicon-chevron-up"></span>
+		        Upvote
+		        <%= post.get_upvotes.size %>
+	      	</button>
+      </form> <!-- /Upvote button -->
+      
+    	<form action="/posts/<%= post.id %>/dislike" method="POST">
+    		<input type="hidden" name="_method" value="PUT" />
+    		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	    		<button class="btn btn-default btn-xs btn-vote">
+		        <span class="glyphicon glyphicon-chevron-down"></span>
+		        Downvote
+		        <%= post.get_downvotes.size %>
+	      	</button>
+      </form> <!-- /Downvote button -->
+
 	    <hr>
 	  </div> <!-- /Post wrapper -->
 	</div> <!-- /Cols -->
