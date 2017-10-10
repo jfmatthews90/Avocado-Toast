@@ -43,3 +43,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 # Do not need bcrypt added here to sign in
+gem 'acts_as_votable', '~> 0.10.0'
