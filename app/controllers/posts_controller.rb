@@ -9,14 +9,15 @@ class PostsController < ApplicationController
       search_term = params[:q]
       @posts = Post.where("name LIKE ?", "%#{search_term}%")
     else
-      @posts = Post.all
+      @posts = Post.all.paginate(page: params[:page], per_page: 5)
     end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @comments = @post.comments.order("created_at DESC")  
+    @posts = Post.find(params[:id])
+    @comments = @post.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3)
   end
 
   # GET /posts/new

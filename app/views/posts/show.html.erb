@@ -52,6 +52,8 @@
 				<h2><%= @post.comments.count %> Comments</h2>
 				<%= render 'comments' %>
 
+				<%= will_paginate @comments, renderer: BootstrapPagination::Rails, class: "pagination" %>
+
 				<%= render 'new_comment' %>
 			</div> <!-- /Comments -->
 		</div> <!-- /Cols -->
