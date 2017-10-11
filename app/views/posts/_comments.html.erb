@@ -6,9 +6,9 @@
       <p><%= "Rating: #{comment.rating}/5" %></p>
       <p><%= comment.body %></p>
 
-      <% if can? :update, comment %>
-      	<%= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, post_comment_path(comment.post, comment), method: :edit, data: { confirm: 'Are you sure?' } %>
-      <% end %>
+      <%# if can? :update, comment %>
+      	<%#= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, post_comment_path(comment.post, comment), method: :edit, data: { confirm: 'Are you sure?' } %>
+      <%# end %>
 
       <% if can? :destroy, comment %>
 	      <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, post_comment_path(comment.post, comment), method: :destroy, data: { confirm: 'Are you sure?' } %>
