@@ -12,38 +12,10 @@ body {
 
 
 
-// Post-index styling
-
-
-
-
-// Sidebar styling
-#sidebar {
-
-	li {
-		padding: .5em .5em;	
-	}
-
-	a {
-		font-size: 1em;
-		text-transform: uppercase;
-		letter-spacing: .05em;
-	}
-
-	a:hover {
-		color: red;
-		text-decoration: none;
-		transition: color 800ms;
-		-webkit-transition: color 600ms; // Needed for Safari to read styling
-	}
-}	
-
-
-
 // Navigation styling
 .navbar {
 	z-index: 100;
-	background-color: #222;
+	background-color: #B9F06B;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -74,6 +46,33 @@ body {
 
 
 
+// Sidebar styling
+#sidebar {
+
+	li {
+		padding: .5em .5em;	
+	}
+
+	a {	
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+
+	a:hover {
+		color: red;
+		text-decoration: none;
+		transition: color 800ms;
+		-webkit-transition: color 600ms; // Needed for Safari to read styling
+	}
+}	
+
+
+
+// Post-index styling
+
+
+
 // Pagination
 .pagination {
 	padding-left: 2em;
@@ -81,10 +80,9 @@ body {
 
 
 
-
 // Footer styling
 .footer {
-	background-color: #222;
+	background-color: #B9F06B;
 	width: 100%;
 	position: fixed;
 	bottom: 0;
