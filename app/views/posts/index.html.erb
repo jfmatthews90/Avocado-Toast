@@ -2,14 +2,18 @@
 
 <hr />
 
-<div class="content">
+<div class="post-index-content">
   <div class="container-fluid">
     <div class="row" id="posts-index">
-      <% @posts.each do |post| %>
-        <%= render post %>
-	    <% end %>
+    	<div class="col-lg-10 col-md-10 col-sm-12">
+	      <% @posts.each do |post| %>
+	        <%= render post %>
+		    <% end %>
+		  </div> <!-- /Col -->
     </div> <!-- /Row -->
   </div> <!-- /Container-fluid -->
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails, class: "pagination" %>
 </div> <!-- /Content -->
 
-<%= will_paginate @posts, renderer: BootstrapPagination::Rails, class: "pagination" %>
+
+

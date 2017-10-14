@@ -1,0 +1,31 @@
+<sidebar id="sidebar">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2 col-md-4 col-ms-12">
+
+
+	      <div class="card my-4">
+	        <h5 class="card-header">Search</h5>
+	        <div class="card-body">			
+				    <li class="search-bar">
+				    	<%= form_with(url: posts_path, method: 'get', local: true) do |form| %>
+							<%= form.label :q, 'Search for:' %>
+						  <%= form.text_field :q, id: 'q', value: params[:q] %>
+						  <%= form.submit 'Search' %>
+							<% end %>
+						</li>			
+	        </div> <!-- /Card-body -->
+				</div> <!--  /Card -->
+
+	      <div class="card my-4">
+	        <h5 class="card-header">Sign in or out</h5>
+	        <div class="card-body">			
+				    <li class="sign-in-or-out">
+
+
+
+			</div> <!-- /Col -->
+		</div> <!-- /Row and Sidebar -->	
+	</div>	<!-- /Container-fluid -->
+</sidebar>
+

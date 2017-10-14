@@ -25,7 +25,7 @@
 				    <span class="icon-bar"></span>
 				  </button>
 					<div class="projectName navbar-brand">
-				    <li><%= link_to "Avocado Toast", root_path %></li>
+				    <li><%#= image_tag 'avocado_toast.jpg', class: "blog-logo" %></li>
 					</div> <!-- /Project name -->
 				</div> <!-- /Navbar-header -->
 
@@ -67,19 +67,20 @@
 
 
     <%= yield %>
+    <%= render '/posts/sidebar' %>
 
 
 		<footer class="footer">
 			<div class="copyright">
-		  	&copy; 2017 Test Blog - All Rights Reserved
+		  	&copy; 2017 Avocado Toast - All Rights Reserved
 		  </div> 
 		</footer> <!-- /Footer -->
 
-	<!-- JavaScript -->
-	<!-- Bootstrap jQ -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- Bootstrap JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- JavaScript -->
+		<!-- Bootstrap jQ -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>
 </html>
