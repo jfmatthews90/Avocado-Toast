@@ -8,6 +8,7 @@
 body {
 	padding-top: 80px;
 	padding-bottom: 64.5px;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -22,7 +23,7 @@ body {
 
 	ul {
 		float: right;	
-		padding-right: 20px;
+		padding-right: 15px;
 	}
 }
 
@@ -47,16 +48,24 @@ body {
 		transition: color 800ms;
 		-webkit-transition: color 600ms; // Needed for Safari to read styling
 	}
+
+	.search-bar {
+		width: 90%;
+	}
 }	
 
 
 
 // Posts index styling
 .post-index-content {
+	
+	.new-post-button {
+
+	}
 
 	.post-images {
 		max-height: 15em;
-		max-width: 15em;
+
 	}
 }
 
@@ -81,8 +90,9 @@ body {
 	.copyright {
 		text-align: center;
 		font-size: 1.2em;
+		font-weight: bold;
 		letter-spacing: .05em;
-		color: #337ab7;
+		color: #FF5421;
 		padding: .7em;
 	}
 }
@@ -93,6 +103,7 @@ body {
 .btn-vote {
 	min-width: 100px;
 }
+
 
 
 

@@ -5,8 +5,8 @@
     <div class="search-bar">
     	<%= form_with(url: posts_path, method: 'get', local: true) do |form| %>
 			<%#= form.label :q, 'Search for:' %>
-		  <%= form.text_field :q, id: 'q', value: params[:q] %>
-		  <%= form.submit 'Search' %>
+		  <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control search-bar' %>
+		  <%= form.submit 'Search', class: 'btn btn-default search-submit' %>
 			<% end %>
 		</div>			
   </div> <!-- /Card-body -->

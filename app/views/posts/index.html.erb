@@ -1,5 +1,7 @@
-<%= render "new_post_button" %>
-<hr />
+<% if can? :create, @post %>
+	<%= render "new_post_button" %>
+	<hr />
+<% end %>
 
 <div class="card mb-4">
   <% @posts.each do |post| %>
