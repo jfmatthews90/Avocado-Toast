@@ -1,31 +1,50 @@
-<sidebar id="sidebar">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-2 col-md-4 col-ms-12">
+<!-- Search Widget -->
+<div class="card my-4">
+  <h3 class="card-header">Search</h3>
+  <div class="card-body">			
+    <div class="search-bar">
+    	<%= form_with(url: posts_path, method: 'get', local: true) do |form| %>
+			<%#= form.label :q, 'Search for:' %>
+		  <%= form.text_field :q, id: 'q', value: params[:q] %>
+		  <%= form.submit 'Search' %>
+			<% end %>
+		</div>			
+  </div> <!-- /Card-body -->
+</div> <!--  /Card -->
 
+<!-- Categories Widget -->
+<div class="card my-4">
+  <h3 class="card-header">Links</h3>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-6">
+        <ul class="list-unstyled mb-0">
+				  <li><%= link_to "Posts", posts_path %></li>
+	      	<li>
+	      		<% if user_signed_in? %>
+	      			<%= link_to('Sign out', destroy_user_session_path, method: :delete) %>
+	      		<% else %>
+	      			<%= link_to('Sign in', new_user_session_path) %>
+	      		<% end %>
+	      	</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <ul class="list-unstyled mb-0">
+				  <li><%= link_to "About", static_pages_about_path %></li>
+				  <li><%= link_to "Contact", static_pages_contact_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-	      <div class="card my-4">
-	        <h5 class="card-header">Search</h5>
-	        <div class="card-body">			
-				    <li class="search-bar">
-				    	<%= form_with(url: posts_path, method: 'get', local: true) do |form| %>
-							<%= form.label :q, 'Search for:' %>
-						  <%= form.text_field :q, id: 'q', value: params[:q] %>
-						  <%= form.submit 'Search' %>
-							<% end %>
-						</li>			
-	        </div> <!-- /Card-body -->
-				</div> <!--  /Card -->
+<!-- Side Widget -->
+<div class="card my-4">
+  <h3 class="card-header">Future Features</h3>
+  <div class="card-body">
+    This space is reserved for future features or ad space.
+  </div>
+</div>
 
-	      <div class="card my-4">
-	        <h5 class="card-header">Sign in or out</h5>
-	        <div class="card-body">			
-				    <li class="sign-in-or-out">
-
-
-
-			</div> <!-- /Col -->
-		</div> <!-- /Row and Sidebar -->	
-	</div>	<!-- /Container-fluid -->
-</sidebar>
 
