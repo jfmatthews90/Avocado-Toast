@@ -24,24 +24,6 @@ body {
 		float: right;	
 		padding-right: 20px;
 	}
-
-	li {
-		display: inline-block;
-		padding: .5em .5em;	
-	}
-
-	a {
-		font-size: 2em;
-		text-transform: uppercase;
-		letter-spacing: .05em;
-	}
-
-	a:hover {
-		color: #ff0;
-		text-decoration: none;
-		transition: color 800ms;
-		-webkit-transition: color 600ms; // Needed for Safari to read styling
-	}
 }
 
 
@@ -69,7 +51,14 @@ body {
 
 
 
-// Post-index styling
+// Posts index styling
+.post-index-content {
+
+	.post-images {
+		max-height: 15em;
+		max-width: 15em;
+	}
+}
 
 
 
@@ -100,20 +89,10 @@ body {
 
 
 
-// Posts index styling
-.post-images {
-	max-height: 15em;
-	max-width: 15em;
-}
-
-
-
 // Vote button styling
 .btn-vote {
 	min-width: 100px;
-
 }
-
 
 
 

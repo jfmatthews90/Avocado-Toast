@@ -1,5 +1,17 @@
 // Blog logo styling
-.blog-logo {
-	max-width: 250px;
-	margin-left: 50px;
+
+.navbar-header {
+	width: 100%;
+	text-align: center;
+
+	.navbar-brand {
+		width: 100%;
+	}
+
+	.blog-logo {
+	  max-width: 250px;
+	  border: solid 1px gray;
+	  margin: auto;
+
+	}
 }
