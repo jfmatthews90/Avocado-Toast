@@ -18,7 +18,25 @@ body {
 
 
 // Sidebar styling
+#sidebar {
 
+	li {
+		padding: .5em .5em;	
+	}
+
+	a {
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+
+	a:hover {
+		color: red;
+		text-decoration: none;
+		transition: color 800ms;
+		-webkit-transition: color 600ms; // Needed for Safari to read styling
+	}
+}	
 
 
 
