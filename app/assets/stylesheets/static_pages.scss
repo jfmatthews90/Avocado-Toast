@@ -80,10 +80,11 @@ body {
 
 // Footer styling
 .footer {
+	border-top: solid 1px black;
 	background-color: #B9F06B;
 	width: 100%;
-	position: fixed;
-	bottom: 0;
+	position: relative;
+	bottom: -200px;
 	z-index: 100;
 	;
 
