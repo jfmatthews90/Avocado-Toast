@@ -26,8 +26,8 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
-  root 'posts#index'
+  #root 'posts#index'
 
-  #root 'static_pages#landing_page'
+  root 'static_pages#landing_page'
 
 end

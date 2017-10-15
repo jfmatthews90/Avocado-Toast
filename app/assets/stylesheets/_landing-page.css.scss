@@ -1,0 +1,16 @@
+// Landing Page styling
+.welcome {
+	text-align: center;
+
+	h1 {
+		font-size: 3em;
+	}
+
+	.landing-page-img {
+		display: block;
+	  max-width: 40em;
+	  margin-left: auto;
+	  margin-right: auto;
+	  border: solid 1px gray;
+	 }
+}
