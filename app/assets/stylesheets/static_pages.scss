@@ -22,6 +22,9 @@ body {
 	width: 100%;
 	top: 0;
 
+	.title {
+		color: #lightgray;
+	}
 
 	ul {
 		float: right;	
@@ -61,14 +64,9 @@ body {
 
 // Posts index styling
 .post-index-content {
-	
-	.new-post-button {
-
-	}
 
 	.post-images {
 		max-height: 15em;
-
 	}
 }
 
@@ -96,7 +94,7 @@ body {
 		font-size: 1.2em;
 		font-weight: bold;
 		letter-spacing: .05em;
-		color: #FF5421;
+		color: #lightgray;
 		padding: .7em;
 	}
 }
@@ -107,7 +105,6 @@ body {
 .btn-vote {
 	min-width: 100px;
 }
-
 
 
 

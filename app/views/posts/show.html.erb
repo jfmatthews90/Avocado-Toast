@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
-<%= render "new_post_button" %>
-<hr />
+
+<% if can? :create, @post %>
+	<%= render "new_post_button" %>
+	<hr />
+<% end %>
 
 <div id="post-content" class="container-fluid">
 	<div class="row">
