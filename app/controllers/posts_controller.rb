@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.paginate(page: params[:page], per_page: 5)
     end
+    @posts = @posts.order(created_at: :desc).paginate(page:params[:page], per_page: 5 )
   end
 
   # GET /posts/1
