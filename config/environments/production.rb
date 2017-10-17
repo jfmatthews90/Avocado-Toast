@@ -101,4 +101,7 @@ Rails.application.configure do
     domain: 'heroku.com',
     enable_starttls_auto: true
   }
+
+  config.web_socket_server_url = "wss://jfm-testblog.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://jfm-testblog.herokuapp.com', 'http://jfm-testblog.herokuapp.com']
 end

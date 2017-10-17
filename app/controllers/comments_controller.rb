@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
+        ActionCable.server.broadcast 'post_channel', comment: @comment
         format.html { redirect_to @post, notice: 'Comment was created successfully.' }
         format.json { render :show, status: :created, location: @post }
         format.js

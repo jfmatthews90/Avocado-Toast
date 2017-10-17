@@ -53,6 +53,7 @@
 
 			<div id="comments">
 				<h2><%= @post.comments.count %> Comments</h2>
+				<div class="alert alert-info" style="display:none" role="alert">A new comment has been posted!</div>
 				<%= render 'comments' %>
 
 				<%= will_paginate @comments, renderer: BootstrapPagination::Rails, class: "pagination" %>
