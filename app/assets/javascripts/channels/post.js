@@ -9,16 +9,17 @@ App.post = App.cable.subscriptions.create("PostChannel", {
 
   received: function(data) {
     $(".alert.alert-info").show();
+    $('.post-comments').prepend(data.comment);
   },
 
   listen_to_comments: function() {
   	return this.perform('listen', {
-    	product_id: $("[data-product-id]").data("product-id")
+    	post_id: $("[data-post-id]").data("post-id")
   	});
-  }
+  } 
 });
 
 
 $(document).on('turbolinks:load', function() {
-  App.product.listen_to_comments();
+  App.post.listen_to_comments();
 });

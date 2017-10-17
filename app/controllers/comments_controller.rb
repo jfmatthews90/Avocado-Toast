@@ -1,11 +1,13 @@
 class CommentsController < ApplicationController
+
   def create
     @post = Post.find(params[:post_id])
+    @user = current_user
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
-        ActionCable.server.broadcast 'post_channel', comment: @comment
+        #ActionCable.server.broadcast 'post_channel', comment: @comment
         format.html { redirect_to @post, notice: 'Comment was created successfully.' }
         format.json { render :show, status: :created, location: @post }
         format.js
